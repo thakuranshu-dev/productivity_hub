@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Hub</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body>
+  <div id="loader" class="loader">
+    <img src="../assets/favicon.gif" alt="Productivity Hub Loader" > 
+  </div>
+  <header>
+    <nav>
+      <button data-tab="todo" class="active">Todo List</button>
+      <button data-tab="notes">Sticky Notes</button>
+      <button data-tab="timer">Timer</button>
+      <button data-tab="stopwatch">Stopwatch</button>
+    </nav>
+  </header>
+  <main>
+    <section id="todo" class="active">
+      <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Enter new task..." required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todoList"></ul>
+    </section>
+    <section id="notes">
+      <form id="noteForm">
+        <textarea id="noteInput" placeholder="Write a note..." required></textarea>
+        <button type="submit">Add</button>
+      </form>
+      <div id="noteList"></div>
+    </section>
+    <section id="timer">
+      <form id="timerSetForm">
+        <div class="timerSetGroup">
+          <label for="timerHours">Hours</label>
+          <input type="number" id="timerHours" class="timerInput" min="0" max="99" value="0" aria-label="Hours" />
+        </div>
+        <span>:</span>
+        <div class="timerSetGroup">
+          <label for="timerMinutes">Minutes</label>
+          <input type="number" id="timerMinutes" class="timerInput" min="0" max="59" value="0" aria-label="Minutes" />
+        </div>
+        <span>:</span>
+        <div class="timerSetGroup">
+          <label for="timerSeconds">Seconds</label>
+          <input type="number" id="timerSeconds" class="timerInput" min="0" max="59" value="0" aria-label="Seconds" />
+        </div>
+        <button type="submit">Set</button>
+      </form>
+      <div id="timerDisplay">00:00:00</div>
+      <div id="timerControls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" class="secondary">Stop</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </section>
+    <section id="stopwatch">
+      <h2>Stopwatch</h2>
+      <div id="stopwatchDisplay">00:00:00</div>
+      <div id="stopwatchControls">
+        <button id="swStartBtn">Start</button>
+        <button id="swStopBtn" class="secondary">Stop</button>
+        <button id="swResetBtn">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
