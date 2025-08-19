@@ -60,3 +60,196 @@ section {
 section.active { 
   display:block; 
 }
+/* Todo */
+#todoForm { 
+  display:flex; 
+  gap:10px; 
+  margin-bottom:14px; 
+}
+#todoForm input { 
+  flex:1; 
+  padding:8px 10px; 
+  border-radius:8px; 
+  border:1px solid #ccc; 
+}
+#todoForm button { 
+  padding:8px 14px; 
+  border:none; 
+  background:var(--accent); 
+  color:#fff; 
+  border-radius:8px; 
+  cursor:pointer; 
+}
+#todoList { 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+  display:grid; 
+  gap:10px; 
+}
+#todoList li { 
+  background:#f0f4ff; 
+  padding:10px 14px; 
+  border-radius:8px; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+}
+#todoList button { 
+  border:none; 
+  background:#ef4444; 
+  color:#fff; 
+  border-radius:6px; 
+  cursor:pointer; 
+  padding:4px 8px; 
+}
+
+/* Notes */
+#noteForm { 
+  display:flex; 
+  gap:10px; 
+  margin-bottom:14px; 
+}
+#noteForm textarea { 
+  flex:1; 
+  padding:10px; 
+  border-radius:8px; 
+  border:1px solid #ccc; 
+  resize:vertical; 
+}
+#noteForm button { 
+  padding:8px 14px; 
+  border:none; 
+  background:var(--accent); 
+  color:#fff; 
+  border-radius:8px; 
+  cursor:pointer; 
+}
+#noteList { 
+  display:grid; 
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); 
+  gap:10px; 
+}
+.note { 
+  background:#fff9c4; 
+  padding:10px; 
+  border-radius:8px; 
+  position:relative; 
+  box-shadow: var(--shadow); 
+}
+.note button { 
+  position:absolute; 
+  top:6px; 
+  right:6px; 
+  border:none; 
+  background:#ef4444; 
+  color:#fff; 
+  border-radius:6px; 
+  cursor:pointer; 
+  padding:2px 6px; 
+  font-size:.8rem; 
+}
+
+/* Timer */
+#timerDisplay { 
+  font-size:2rem; 
+  text-align:center; 
+  margin:20px 0; 
+}
+#timerSetForm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+.timerSetGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+#timerSetForm .timerInput {
+  width: 50px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+#timerSetForm label {
+  margin-bottom: 2px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+#timerSetForm button {
+  padding: 6px 14px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+}
+#timerSetForm input { 
+  width: 50px; 
+}
+#timerSetForm input[type="number"]::-webkit-inner-spin-button, #timerSetForm input[type="number"]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+#timerSetForm input[type="number"]::-webkit-inner-spin-button,
+#timerSetForm input[type="number"]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+#timerSetForm input[type="number"]::-webkit-inner-spin-button,
+#timerSetForm input[type="number"]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+#timerControls { 
+  display:flex; 
+  justify-content:center; 
+  gap:10px; 
+}
+#timerControls button { 
+  padding:10px 14px; 
+  border:none; 
+  border-radius:8px; 
+  cursor:pointer; 
+  background:var(--accent); 
+  color:#fff; 
+  font-weight:600; 
+}
+#timerControls button.secondary {
+   background:#ef4444; 
+  }
+/* Stopwatch */
+#stopwatchDisplay { 
+  font-size:2rem; 
+  text-align:center; 
+  margin:20px 0; 
+}
+#stopwatch h2{ 
+  text-align: center; 
+}
+#stopwatchControls { 
+  display:flex; 
+  justify-content:center; 
+  gap:10px; 
+}
+#stopwatchControls button { 
+  padding:10px 14px; 
+  border:none; 
+  border-radius:8px; 
+  cursor:pointer; 
+  background:var(--accent); 
+  color:#fff; 
+  font-weight:600; 
+}
+#stopwatchControls button.secondary {
+  background:#ef4444; 
+}
